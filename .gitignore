@@ -1,0 +1,49 @@
+# --- Never committed (repo rules, section 3) --------------------------------
+# Your own copy of the game. Mario Is Missing! is commercial software; nothing
+# from it -- MARIO.BIN, the .V2L/.RES/.LST data, voices, drivers -- is ever in
+# this repository.
+original/
+*.BIN
+*.V2L
+*.RES
+*.LST
+*.AD
+*.ADV
+*.COM
+*.NAM
+*.NEW
+*.EXE
+*.exe
+*.DIZ
+*.FRM
+*.DOC
+*.pdf
+
+# Everything generated from the game binaries: the unpacked image, the lifted
+# C (work/<game>/gen), dispatch-miss lists, recordings and frame dumps.
+work/
+
+# Saved games and CONFIG the games write at run time.
+saves/
+
+# --- Build output -------------------------------------------------------------
+build/
+build-*/
+out/
+dist/
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.exp
+
+# --- Tooling ------------------------------------------------------------------
+__pycache__/
+*.pyc
+.vs/
+.vscode/
+*.user
+setup.log
+/screenshots/
+# the launchers setup makes
+/*.lnk
