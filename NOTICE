@@ -1,7 +1,7 @@
 Mario Is Missing! Deluxe (DOS) recomp
 Copyright (c) 2026 sp00nz. MIT licensed; see LICENSE.
 
-This repository includes third-party code under its own licence:
+This repository includes third-party code under its own license:
 
   third_party/ymfm/    ymfm, Yamaha FM sound chip emulation
                        Copyright (c) 2021, Aaron Giles

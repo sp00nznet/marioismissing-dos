@@ -773,7 +773,11 @@ def main():
     open(os.path.join(work, 'unpacked.exe'), 'wb').write(im.exe)
     # Anything a previous run jumped to that had no lifted function. Local to
     # this checkout (work/ is never committed); see docs/lifting.md.
+    # tools/<game>_seeds.txt is the same list, committed (addresses only), so
+    # a fresh clone lifts what the tested build lifted without play-and-relift
+    # rounds.
     extra = load_misses(os.path.join(work, 'misses.txt'))
+    extra |= load_misses(os.path.join(ROOT, 'tools', f'{game}_seeds.txt'))
 
     # Walk from the entry point, then add the stored code pointers the walk
     # makes visible and walk again until nothing new turns up.

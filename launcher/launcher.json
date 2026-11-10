@@ -1,0 +1,17 @@
+{
+  "title": "Mario Is Missing! CD-ROM Deluxe (DOS)",
+  "repo": "sp00nznet/marioismissing-dos",
+  "accent": "#d83a2a",
+  "note": {
+    "windows": "The build takes a few minutes and under 1 GB. Python, CMake, Git and the Visual Studio Build Tools (about 2 GB) are installed if they are missing. Point it at the CD-ROM Deluxe disc or a copy of its MARIO folder."
+  },
+  "game": {
+    "name": "Mario Is Missing! CD-ROM Deluxe",
+    "files": ["MARIO.BIN|MARIO/MARIO.BIN|mario.bin|mario/mario.bin"]
+  },
+  "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "ef3f0da6e08a8eb7a3f869273f3df071ca8d7373", "dir": "pcrecomp" }],
+  "setup": {
+    "windows": ["cmd", "/c", "Setup.cmd", "-Yes", "-GameDir", "{game}"]
+  },
+  "play": "Mario Is Missing*"
+}
