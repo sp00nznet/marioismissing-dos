@@ -12,7 +12,7 @@
 
   Every step is skipped when its result is already there (-Force redoes the
   lift), so running it again after a failure carries on. Details go to
-  setup.log. It runs exactly the commands README "Step by step" lists.
+  setup.log. It runs exactly the commands docs/building.md lists.
 
   Nothing from the game is downloaded or bundled: the files come from your own
   disc, and everything generated from them stays in work\ and build\.
@@ -30,7 +30,7 @@ $Log = Join-Path $Root "setup.log"
 "=== setup $(Get-Date -Format s)" | Out-File $Log -Encoding utf8
 
 # The toolkit commit this game was last lifted, built and run against
-# (README, "Building from source"). A commit, not a branch: main moves.
+# (docs/building.md). A commit, not a branch: main moves.
 $PcrecompUrl = "https://github.com/sp00nznet/pcrecomp.git"
 $PcrecompRef = "ef3f0da6e08a8eb7a3f869273f3df071ca8d7373"
 

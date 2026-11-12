@@ -15,7 +15,8 @@
 - Build and publish the recomp-launcher installer (the workflow is manual
   while the repo is private).
 - Check `--headless --record out.mp4` end to end on a test VM.
-- Linux and macOS: the SDL2 host still has the relative mouse.
+- Linux and macOS: the SDL2 host still has the relative mouse; then a real
+  `setup.sh` (today it says there is none and exits).
 - Window: aspect is the game's 320x240 at 4:3; check the pointer mapping in
   the pixel and CRT display modes.
 

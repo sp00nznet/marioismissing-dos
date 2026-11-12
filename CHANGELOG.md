@@ -18,9 +18,16 @@ All notable changes to this project are documented here. The format follows
   the castle without play-and-relift rounds.
 - A recomp-netlab recipe (`marioismissing-dos`) with the self-test as QA.
 
+- `CONTRIBUTING.md`, `CONTRIBUTORS.md`, `docs/building.md` (step by step,
+  the command line, netlab) and `docs/testing.md` (the self-test, headless
+  runs).
+- `setup.sh`, which says there is no Linux or macOS build yet and exits.
+
 ### Changed
-- README rewritten in the pcrecomp house style: status table, Quick start
-  and Step by step, Usage, Building from source.
+- README in the redalert2-recomp section order; the step by step and the
+  command line moved to `docs/building.md`.
+- `NOTICE` is now `NOTICE.md`: what the MIT license covers and what it
+  doesn't, and a table of the third-party code (ymfm).
 
 ## [0.1.0] - 2026-11-08
 
