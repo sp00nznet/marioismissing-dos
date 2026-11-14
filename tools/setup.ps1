@@ -5,7 +5,7 @@
     1. check the tools (Python 3, CMake, Git, Visual Studio 2022 C++ build
        tools) and offer to install what is missing
     2. copy your CD's MARIO folder into original\mim
-    3. fetch the pcrecomp toolkit next to this folder, at the tested commit
+    3. fetch the pcrecomp toolkit next to this folder (main)
     4. lift MARIO.BIN to C (tools\lift.py mim)
     5. build with CMake/MSVC and run the self-test
     6. put a shortcut in this folder
@@ -29,10 +29,8 @@ Set-Location $Root
 $Log = Join-Path $Root "setup.log"
 "=== setup $(Get-Date -Format s)" | Out-File $Log -Encoding utf8
 
-# The toolkit commit this game was last lifted, built and run against
-# (docs/building.md). A commit, not a branch: main moves.
+# The toolkit: pcrecomp main (docs/building.md).
 $PcrecompUrl = "https://github.com/sp00nznet/pcrecomp.git"
-$PcrecompRef = "ef3f0da6e08a8eb7a3f869273f3df071ca8d7373"
 
 function Say($m) { Write-Host $m; $m | Out-File $Log -Append -Encoding utf8 }
 function Fail($m) {
@@ -133,10 +131,9 @@ if ($env:PCRECOMP_HOME -and (Test-Path "$env:PCRECOMP_HOME\tools\lift\lift16.py"
     $pcr = Join-Path (Split-Path $Root -Parent) "pcrecomp"
     if (-not (Test-Path "$pcr\tools\lift\lift16.py")) {
         Run "fetching pcrecomp into $pcr (about 20 MB)" { git clone --quiet $PcrecompUrl $pcr }
-        Run "checking out pcrecomp $($PcrecompRef.Substring(0, 7))" { git -C $pcr checkout --quiet $PcrecompRef }
     } else {
         # someone's existing checkout: used as it is, never switched
-        Say "  using your checkout at $pcr (tested with $($PcrecompRef.Substring(0, 7)))"
+        Say "  using your checkout at $pcr"
     }
 }
 $pcr = (Resolve-Path $pcr).Path

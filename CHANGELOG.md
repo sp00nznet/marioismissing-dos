@@ -24,6 +24,8 @@ All notable changes to this project are documented here. The format follows
 - `setup.sh`, which says there is no Linux or macOS build yet and exits.
 
 ### Changed
+- Builds against pcrecomp main; Setup and the launcher no longer pin
+  commit `ef3f0da`.
 - README in the redalert2-recomp section order; the step by step and the
   command line moved to `docs/building.md`.
 - `NOTICE` is now `NOTICE.md`: what the MIT license covers and what it

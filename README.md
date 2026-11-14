@@ -34,7 +34,7 @@ The script checks for Python 3, CMake, Git and the Visual Studio 2022 C++
 build tools and **asks** before installing any of them, finds `MARIO\MARIO.BIN`
 on any drive (or asks; `-GameDir E:\` skips the question, `-Yes` answers yes
 to every install), copies the game into `original\mim`, fetches pcrecomp
-(`main`, pinned at the tested commit `ef3f0da`) beside this folder, lifts,
+(`main`) beside this folder, lifts,
 builds and runs the self-test. A rerun skips finished steps; if it stops, it
 says why, with the details in `setup.log`. Building by hand and the command
 line are in **[docs/building.md](docs/building.md)**. Windows only for now:

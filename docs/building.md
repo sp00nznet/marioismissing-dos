@@ -1,8 +1,7 @@
 # Building
 
 `Setup.cmd` (`tools/setup.ps1`) runs exactly these commands; this is the same
-thing by hand. The toolkit is pcrecomp `main`, pinned at commit `ef3f0da`
-(`main` moves; that is the commit this game was tested with).
+thing by hand. The toolkit is pcrecomp `main`.
 
 ## Step by step
 
@@ -10,10 +9,9 @@ Prerequisites: Windows 10/11, Python 3.10+ (`py --version`), CMake 3.20+,
 Git, and Visual Studio 2022 (or its Build Tools) with *Desktop development
 with C++*. ffmpeg on `PATH` only for `--record`.
 
-1. **The toolkit**, beside this folder, at the commit this game was tested with:
+1. **The toolkit**, beside this folder:
    ```
    git clone https://github.com/sp00nznet/pcrecomp ..\pcrecomp
-   git -C ..\pcrecomp checkout ef3f0da
    set PCRECOMP_HOME=%CD%\..\pcrecomp
    ```
    Without `PCRECOMP_HOME`, `tools\lift.py` and CMake look for `..\pcrecomp`.
@@ -51,7 +49,7 @@ The usual trip-ups: `python` opening the Microsoft Store (that is Windows'
 alias placeholder; use `py`, or turn the alias off in *Settings > Apps >
 Advanced app settings > App execution aliases*); a freshly installed tool not
 being on `PATH` until you open a new window; and a `..\pcrecomp` on a branch
-other than the tested commit (it may lift differently).
+other than `main` (it may lift differently).
 
 ## Usage
 

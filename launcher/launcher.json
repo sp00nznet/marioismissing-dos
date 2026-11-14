@@ -9,7 +9,7 @@
     "name": "Mario Is Missing! CD-ROM Deluxe",
     "files": ["MARIO.BIN|MARIO/MARIO.BIN|mario.bin|mario/mario.bin"]
   },
-  "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "ef3f0da6e08a8eb7a3f869273f3df071ca8d7373", "dir": "pcrecomp" }],
+  "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "main", "dir": "pcrecomp" }],
   "setup": {
     "windows": ["cmd", "/c", "Setup.cmd", "-Yes", "-GameDir", "{game}"]
   },
