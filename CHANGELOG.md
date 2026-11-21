@@ -6,13 +6,15 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-20
+
 ### Added
 - `Setup.cmd` (`tools/setup.ps1`): checks and offers to install the tools,
   copies the CD's `MARIO` folder, fetches pcrecomp at the tested commit,
   lifts, builds, runs the self-test and leaves a shortcut. Tested from a
   clean clone.
 - `launcher/launcher.json` for recomp-launcher, and an installer workflow
-  (manual only while the repo is private).
+  (on push and v* tags).
 - `tools/mim_seeds.txt`: the run-time entry points earlier runs recorded, read
   by `tools/lift.py`, so a fresh clone lifts all 1,936 functions and reaches
   the castle without play-and-relift rounds.
